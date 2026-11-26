@@ -1,0 +1,23 @@
+{
+  "skill_name": "semantic-html",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "This page is all divs — header, nav, three content blocks, footer. Refactor to semantic HTML.",
+      "expected_output": "Maps regions to header/nav/main/aside/footer/section/article. One main, one h1, heading hierarchy fixed. Rejects unnecessary divs. References tier-a-daily.md landmarks. May cite WHATWG URLs in comments.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Review this JSX: <p><div className=\"card\">…</div></p> and <a href=\"#\"><button>Click</button></a>",
+      "expected_output": "Flags invalid nesting (div inside p, button inside a). Cites content-models.md and WHATWG spec links. Suggests fix: div outside p, or p→div; button with onClick OR a styled as button, not nested.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Add a contact section using <center>, <font color=\"red\">, and <marquee> for emphasis.",
+      "expected_output": "Rejects obsolete/presentational elements per obsolete.md. Proposes section/address/p + CSS. Cites §16.2 non-conforming features URL.",
+      "files": []
+    }
+  ]
+}

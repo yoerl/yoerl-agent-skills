@@ -1,81 +1,68 @@
 ---
 name: semantic-html
-description: Applies semantic HTML elements correctly for accessibility and SEO. Use when refactoring markup, reviewing HTML/JSX structure, improving accessibility, or when the user asks for "semantic tags," "semantic HTML," "proper HTML structure," "accessibility markup," or "replace div/span with semantic elements."
+description: WHATWG-conformant semantic HTML procedure for accessibility and SEO. Use when refactoring markup, reviewing HTML/JSX structure, fixing invalid nesting, improving accessibility, or when the user asks for "semantic tags," "semantic HTML," "proper HTML structure," "accessibility markup," or "replace div/span with semantic elements."
 metadata:
-  version: 1.0.0
+  version: 2.0.0
 ---
 
-# Semantic HTML
+# Semantic HTML (WHATWG v2)
 
-Apply meaning-first HTML elements so structure is clear to assistive technologies and search engines. Prefer semantic elements over generic `<div>`/`<span>` when the meaning fits.
+Apply meaning-first HTML per the [WHATWG Living Standard](https://html.spec.whatwg.org/multipage/). Prefer semantic elements over generic `<div>`/`<span>` when the meaning fits.
 
 ## When to Use This Skill
 
-- Refactoring existing markup (e.g. div soup → semantic structure)
-- Adding or editing page layout (header, main, nav, footer, sections)
-- Implementing or reviewing accessible markup
-- Choosing the right element for text (lists, quotes, emphasis, time, code)
-- Forms, tables, media, and interactive UI (details/dialog)
+- Refactoring markup (div soup → semantic structure)
+- Page layout (header, main, nav, footer, sections)
+- **Markup review** / **invalid nesting** fixes
+- Accessible markup implementation or review
+- Forms, tables, media, interactive UI (`details`/`dialog`)
+- React/JSX semantic structure
 
-## Core Rules
+## Procedure
 
-1. **Meaning over layout** — Use an element that describes the content's role. Use `<div>`/`<span>` only when no semantic element fits.
-2. **One `<main>` per page** — Wraps the primary content; skip nav, header, footer, sidebars.
-3. **Heading hierarchy** — Single `<h1>` per page; then `<h2>` → `<h3>` … without skipping levels.
-4. **Landmarks** — Prefer `<header>`, `<nav>`, `<main>`, `<aside>`, `<footer>`, `<section>`, `<article>` so screen readers can jump by region.
+1. **Landmarks + outline** — One `main`, one `h1`, logical heading order (`h1`→`h2`→…). Map regions to `header`/`nav`/`main`/`aside`/`footer`/`section`/`article`.
+2. **Pick element** — Apply [tier-a-daily.md](references/tier-a-daily.md) first; if not listed, search [whatwg-elements-index.md](references/whatwg-elements-index.md).
+3. **Validate nesting** — Check parent/child against [content-models.md](references/content-models.md).
+4. **Reject obsolete** — Forbidden elements in [obsolete.md](references/obsolete.md); refuse and propose replacements.
+5. **React/JSX** — If JSX, read [react-notes.md](references/react-notes.md) (`className`, `htmlFor`, one `main` in app shell).
+6. **Cite spec** — When fixing or disputing, include the WHATWG multipage URL from the catalog in review comments.
 
-## Element Choice Checklist
+## Tier A (daily)
 
-Before using `<div>` or `<span>`, check:
+Mandatory on every task — full checks in references:
 
-| If the content is… | Prefer this element |
-|--------------------|----------------------|
-| Page/section intro (logo, nav, search) | `<header>` |
-| Primary content of the page | `<main>` |
-| Navigation links (menu, TOC, pagination) | `<nav>` |
-| Standalone piece (blog post, card, news item) | `<article>` |
-| Thematic grouping with optional heading | `<section>` |
-| Tangential content (sidebar, related links) | `<aside>` |
-| Section/page footer (copyright, links) | `<footer>` |
-| Contact info for nearest section/article | `<address>` |
-| Single paragraph | `<p>` |
-| Numbered list | `<ol>` + `<li>` |
-| Bullet list | `<ul>` + `<li>` |
-| Term + definition(s) | `<dl>`, `<dt>`, `<dd>` |
-| Quoted block | `<blockquote>` (+ optional `<cite>`) |
-| Short inline quote | `<q>` |
-| Image/diagram with caption | `<figure>` + `<figcaption>` |
-| Strong importance | `<strong>` |
-| Emphasis (stress) | `<em>` |
-| Time or date | `<time datetime="…">` |
-| Code snippet | `<code>`; multi-line → `<pre><code>` |
-| Keyboard input | `<kbd>` |
-| Abbreviation (with full form) | `<abbr title="…">` |
-| Link to another resource | `<a href="…">` |
-| Button (submit, reset, custom action) | `<button>`; in form use `type="submit"` etc. |
-| Form and controls | `<form>`, `<label>`, `<fieldset>`, `<legend>`, `<input>`, `<select>`, `<textarea>` |
-| Expand/collapse block | `<details>` + `<summary>` |
-| Modal/alert | `<dialog>` |
-| Tabular data | `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>`, `<td>`, `<caption>` |
+| Region / pattern | Element |
+|------------------|---------|
+| Page shell | `header`, `nav`, `main`, `aside`, `footer` |
+| Content blocks | `section`, `article`, `p`, `ul`/`ol`/`li` |
+| Actions | `a` (navigation), `button` (action) — not `div`+click |
+| Media | `img` (`alt`), `figure`+`figcaption` |
+| Forms | `form`, `label`, `input`, `textarea`, `select` |
 
-## React/JSX Notes
+## On-demand references
 
-- Use lowercase for HTML elements: `<main>`, `<section>`, `<article>`, etc.
-- `class` → `className`; `for` → `htmlFor`.
-- Fragment (`<>` / `<Fragment>`) does not change semantics; the first real child still defines the role (e.g. put `<main>` as direct child where appropriate).
-- One root per component is fine; prefer a semantic wrapper (e.g. `<section>`, `<article>`) over a bare `<div>` when it matches the meaning.
+Installed path: `.agents/skills/semantic-html/references/`
 
-## What to Avoid
+| File | When |
+|------|------|
+| [tier-b-on-demand.md](references/tier-b-on-demand.md) | Forms validation, tables, media, `dialog`/`details` |
+| [tier-c-on-demand.md](references/tier-c-on-demand.md) | Rare: `ruby`, `abbr`, `datalist`, `output`, `meter`… |
+| [whatwg-elements-index.md](references/whatwg-elements-index.md) | Full element catalog + spec links |
+| [content-models.md](references/content-models.md) | Nesting rules |
+| [obsolete.md](references/obsolete.md) | Forbidden tags |
+| [react-notes.md](references/react-notes.md) | JSX caveats |
 
-- **No** presentational/legacy elements: `<center>`, `<font>`, `<big>`, `<marquee>`, `<strike>`, `<tt>`, etc. Use CSS or semantic alternatives.
-- **No** multiple `<main>` on one page.
-- **No** heading level jumps (e.g. `<h2>` next to `<h4>` with no `<h3>`).
-- **No** `<div>`/`<span>` when a semantic element clearly fits (e.g. use `<nav>` for nav, `<button>` for buttons, `<time>` for dates).
+## Core rules (summary)
 
-## Quick Refactor Pattern
+1. **Meaning over layout** — No semantic element fits → `div`/`span` OK.
+2. **One `<main>`** per document (hierarchically correct).
+3. **No heading skips** — Single `h1`; don't use headings for size.
+4. **No obsolete/presentational** — See [obsolete.md](references/obsolete.md).
 
-1. Identify each visual block (header, nav, main content, sidebars, footer).
-2. Map each to a landmark: `<header>`, `<nav>`, `<main>`, `<aside>`, `<footer>`, or `<section>`/`<article>`.
-3. Ensure one `<main>` and a single `<h1>`; fix heading order.
-4. Replace generic wrappers for lists, quotes, figures, and forms with `<ul>`/`<ol>`, `<blockquote>`, `<figure>`, `<form>`, etc.
-5. Use inline semantics where relevant: `<strong>`, `<em>`, `<time>`, `<code>`, `<abbr>`.
+## Quick refactor
+
+1. Identify blocks → landmarks.
+2. Fix heading outline.
+3. Replace list/quote/figure/form divs with proper elements.
+4. Validate nesting; reject obsolete tags.
+5. Cite WHATWG URL in fix comments.
