@@ -4,8 +4,8 @@ description: >-
   Write detailed test cases (TC-*) with a fixed 10-section format — sequence
   diagrams, steps, expected results; no Pass/Fail until execution. Use when
   the user asks to create or expand detailed test cases, TC documents, or
-  to unfold targets from a scenario document's "상세 TC 대상" section. Also
-  triggers on "테스트케이스 작성", "상세 TC", "TC 문서", "test-case".
+  to unfold TC IDs from a scenario file's case table. Also triggers on
+  "테스트케이스 작성", "상세 TC", "TC 문서", "test-case".
 ---
 
 # Detailed Test Case Authoring
@@ -15,8 +15,8 @@ description: >-
 
 ## test-scenario 스킬과의 연동
 
-1. **시나리오 선행:** 기능 흐름을 먼저 정리하려면 `test-scenario` 스킬로 `docs/test-case/*_SCENARIO.md`를 만든다.
-2. **펼칠 대상:** 시나리오 문서의 `## 상세 TC 대상` 표에 적힌 예약 `TC-*` ID·범위부터 본문을 작성한다.
+1. **시나리오 선행:** 기능 흐름을 먼저 정리하려면 `test-scenario` 스킬로 `docs/test-case/*_SCENARIO.md`를 만든다 (`TS-*`당 파일 1개).
+2. **펼칠 대상:** 시나리오 파일 **케이스 표**의 `TC-*` ID·범위부터 10절 본문을 작성한다.
 3. **매핑 유지:** 각 TC의 `시나리오 원본` 칸에 해당 `TS-*` ID와 시나리오 파일 경로를 남긴다.
 
 시나리오 없이 단일 TC만 요청받아도 동일 양식을 따른다.
@@ -48,7 +48,7 @@ description: >-
 
 ## 실행 순서
 
-0. 같은 흐름의 `docs/test-case/*_SCENARIO.md`가 있으면 연다. `## 상세 TC 대상`의 예약 `TC-*`·범위를 이번 작성 scope로 삼는다.
+0. 같은 흐름의 `docs/test-case/*_SCENARIO.md`가 있으면 연다. **케이스 표**의 `TC-*`·범위를 이번 작성 scope로 삼는다.
 1. 라우트, 컴포넌트, 문서, API 흐름을 훑어 대상 화면·분기를 확정한다.
 2. 각 `TC-*`에 10절 골격을 채운다.
 3. 화면별로 권한·상태 분기가 있으면 별도 TC로 분리한다.

@@ -1,7 +1,7 @@
 # 테스트케이스 양식 (상세 TC)
 
 > **SSOT:** 이 파일 (`test-case/references/template-detailed.md`)  
-> 상세 TC 작성: `test-case` 스킬 · 시나리오 선행: `test-scenario` 스킬
+> 상세 TC 작성: `test-case` 스킬 · 시나리오 선행: `test-scenario` 스킬 (`TS-*`당 파일 1개, 케이스 표에서 `TC-*` 펼침)
 
 한 파일에 여러 TC를 넣을 때는 TC마다 아래 골격을 반복하고 사이에 `---`를 둔다.
 
@@ -134,3 +134,4 @@ sequenceDiagram
 - **9번** 판정을 에이전트가 채우지 않는다
 - 시퀀스 다이어그램 칸을 빼거나, 이 TC와 무관한 전체 시스템 그림을 넣지 않는다
 - `Test Steps`를 표 셀 안에 `<br>`로 넣지 않는다 — 실제 줄바꿈 또는 번호 목록만
+- 양식을 `docs/test-case/TEMPLATE.md`로 복사·시드하지 않는다 (이 스킬 references가 SSOT)

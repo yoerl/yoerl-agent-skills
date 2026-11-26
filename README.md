@@ -15,8 +15,8 @@ npx skills add yoerl/yoerl-agent-skills@semantic-html -y
 
 | 스킬 | 설명 |
 |------|------|
-| **test-scenario** | 기능·업무 흐름을 `TS-*` 시나리오로 분해, 관점 점검 후 `docs/test-case/*_SCENARIO.md` 1파일 작성. 실행·판정 없음 |
-| **test-case** | 10절 고정 양식의 상세 TC 작성. 시나리오 문서 `## 상세 TC 대상`과 연동 |
+| **test-scenario** | `TS-*`당 파일 1개 — `TS→TC` 트리·케이스 표. 실행·판정·하위 TS 없음 |
+| **test-case** | 10절 고정 양식의 상세 TC. 시나리오 **케이스 표**의 `TC-*` ID와 연동 |
 | **semantic-html** | 접근성·SEO를 위한 시맨틱 HTML 요소 선택·리팩터링 가이드 |
 
 ## harness_culwonder와의 관계
