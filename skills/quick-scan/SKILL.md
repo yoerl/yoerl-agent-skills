@@ -12,7 +12,9 @@ description: >-
 에이전트는 **시간 강제 없음** (가능한 빨리; 범위·출력만 고정).
 
 **선행:** 범위 없으면 Product·Task·Device 중 하나만 질문.  
-**후행:** 보류 → `handoff-pack` 또는 `heuristic-evaluation`. 근거 회의 → `evidence-brief`.
+**후행:** 보류 → `handoff-pack` 또는 `heuristic-evaluation`. 근거 회의 → `evidence-brief`. 통합 기록 → `ux-review-dossier`.
+
+**판정 SSOT:** `ux-review-dossier/references/verdict-rubric.md`
 
 ## 스캔 순서 (고정)
 

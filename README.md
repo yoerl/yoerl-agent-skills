@@ -15,6 +15,7 @@ npx skills add yoerl/yoerl-agent-skills@nngroup -y
 npx skills add yoerl/yoerl-agent-skills@quick-scan -y
 npx skills add yoerl/yoerl-agent-skills@evidence-brief -y
 npx skills add yoerl/yoerl-agent-skills@handoff-pack -y
+npx skills add yoerl/yoerl-agent-skills@ux-review-dossier -y
 ```
 
 ## 스킬 목록
@@ -30,6 +31,7 @@ npx skills add yoerl/yoerl-agent-skills@handoff-pack -y
 | **quick-scan** | PR·작은 변경용 5휴리스틱 얕은 스캔 — 통과/보류/풀평가 (에이전트 시간 강제 없음) |
 | **evidence-brief** | 회의용 UX 근거 1페이지 — 쟁점, NNG 찬반, 권고 |
 | **handoff-pack** | 평가 결과를 화면개발·QA·기획 handoff 문구로 분해 |
+| **ux-review-dossier** | **UX 통합 리뷰서 (UXD)** — 5스킬 결과 + 판정 기준을 한 md에 통합 |
 
 ### UX 스킬 파이프라인
 
@@ -37,7 +39,10 @@ npx skills add yoerl/yoerl-agent-skills@handoff-pack -y
 quick-scan → (보류) → heuristic-evaluation → handoff-pack
                 ↘ evidence-brief (회의·논쟁 시)
 nngroup (어디서든 근거 검색)
+        ↘ ux-review-dossier (UXD 통합 기록)
 ```
+
+**UXD** = UX Review Dossier (UX 통합 리뷰서). 판정: `ux-review-dossier/references/verdict-rubric.md`
 
 NNG·휴리스틱 정본 wiki: `knowledge/wiki/ux-knowledge/` (오너 knowledge 레포, 선택).
 
