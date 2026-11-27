@@ -17,7 +17,7 @@ npx skills add yoerl/yoerl-agent-skills@semantic-html -y
 | 스킬 | 설명 |
 |------|------|
 | **test-scenario** | `TS-*`당 파일 1개 — `TS→TC` 트리·케이스 표. 실행·판정·하위 TS 없음 |
-| **test-case** | 10절 고정 양식의 상세 TC. 시나리오 **케이스 표**의 `TC-*` ID와 연동 |
+| **test-case** | 10개 항목 고정 양식의 상세 TC. 시나리오 **케이스 표**의 `TC-*` ID와 연동 |
 | **test-scenario-full** | **시나리오 1개 = md 파일 1개.** 그 파일에 시나리오 정보 + 케이스 요약표 + **모든 TC 상세**(목적·유형·우선순위·전제·입력·절차·기대 결과·실행 결과 칸). 단독 설치 가능 |
 | **semantic-html** | WHATWG HTML 카탈로그 + tiered 절차 (A/B/C 참조)로 시맨틱 마크업·리팩터링 |
 
