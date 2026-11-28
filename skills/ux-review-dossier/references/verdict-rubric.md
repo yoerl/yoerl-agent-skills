@@ -6,7 +6,7 @@
 |------|------|------|
 | **통과** | Critical 0, Major 0~1 경미 — 진행 가능 | 기록만 |
 | **보류** | Critical≥1 또는 Major 2+ — 수정·검증 선행 | 수정 → **재스캔** |
-| **풀평가** | 범위·논쟁·영향 큼 — 5H로 부족 | `heuristic-evaluation` 10H |
+| **풀평가** | 범위·논쟁·영향 큼 — 5H로 부족 | `heuristic-checklist-nngroup` 44항 |
 | **조건부 통과** | Critical·Major 정리됨, **needs-test**만 남음 | QA 후 최종 통과 기록 |
 
 ## 2. 판정 결정 트리
@@ -42,13 +42,13 @@ needs-test만 잔류 + 수정 반영  → 조건부 통과
 
 Minor만 → 통과 검토. Critical 하나 → **무조건 보류**.
 
-## 5. §1 판정과 §4 HE 관계
+## 5. §1 판정과 §4 체크리스트 관계
 
 | 상황 | §1 판정 |
 |------|---------|
 | quick-scan만 | §3 판정과 동일 |
-| 풀 HE 완료, Critical 0 | 통과 |
-| 풀 HE 후 Critical/Major 잔류 | 보류 |
+| 44항 체크리스트 완료, Critical 0 | 통과 |
+| 체크리스트 후 Critical/Major 잔류 | 보류 |
 | needs-test만 잔류 | 조건부 통과 |
 
 ## 6. evidence-brief(§5)와 판정

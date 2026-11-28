@@ -1,8 +1,7 @@
 # Nielsen 10 휴리스틱 — 44항 체크리스트
 
 **NN/G 정본:** [nngroup-ten-heuristics.md](nngroup-ten-heuristics.md) · [10 heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/)  
-**한국어 맥락:** [heuristic-guide-ko.md](heuristic-guide-ko.md) · [m4a_ic 블로그](https://blog.naver.com/m4a_ic/222155143518)  
-44항 질문 원문: Jakob Nielsen 휴리스틱 기반 체크리스트 (m4a_ic)
+44항 질문 원문: Jakob Nielsen 휴리스틱 기반 체크리스트 ([m4a_ic](https://blog.naver.com/m4a_ic/222155143518))
 
 각 항목은 예/아니오 형태의 질문이다. 평가 시 질문 문구를 바꾸지 않는다.  
 각 절 제목의 **한글 부제**는 블로그·NNG 원칙 요약이다.

@@ -2,7 +2,7 @@
 name: ux-review-dossier
 description: >-
   Write a UX Review Dossier (UXD, UX 통합 리뷰서) — one file combining nngroup,
-  quick-scan, heuristic-evaluation, evidence-brief, handoff-pack. Use for UXD,
+  quick-scan, heuristic-checklist-nngroup, evidence-brief, handoff-pack. Use for UXD,
   "도스리에", 통합 리뷰서, ux dossier template.
 ---
 
@@ -34,7 +34,7 @@ Product / Task / Device / User Group (없으면 Task 하나만 질문).
 2. §1 요약 — 판정·심각도·액션 3개
 3. §2 `nngroup` — NNG 2~3건 + 맥락
 4. §3 `quick-scan` — 5H 표 + 판정
-5. §4 `heuristic-evaluation` — 이슈 표 (또는 보류 건)
+5. §4 `heuristic-checklist-nngroup` — 44항 체크리스트 (또는 보류 건)
 6. §5 `evidence-brief` — 쟁점 있을 때만
 7. §6 `handoff-pack` — 개발·QA·기획
 8. §7 후속·wiki·재스캔
@@ -52,4 +52,4 @@ Product / Task / Device / User Group (없으면 Task 하나만 질문).
 
 ## 연계 스킬
 
-`nngroup` · `quick-scan` · `heuristic-evaluation` · `evidence-brief` · `handoff-pack`
+`nngroup` · `quick-scan` · `heuristic-checklist-nngroup` · `evidence-brief` · `handoff-pack`

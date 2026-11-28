@@ -1,9 +1,9 @@
 ---
 name: heuristic-checklist-nngroup
 description: >-
-  NN/G Jakob Nielsen 10 휴리스틱 정본 + 44항 체크리스트 + 한국어 원칙 가이드로
-  UI 전문가 휴리스틱 분석. heuristic-checklist-nngroup, 닐슨 44항, NNG 10
-  heuristics, 사용성 점검표, m4a_ic 체크리스트, 스크린샷·프로토타입 점검.
+  NN/G Jakob Nielsen 10 휴리스틱 정본 + 44항 체크리스트로 UI 전문가 휴리스틱
+  분석. heuristic-checklist-nngroup, 닐슨 44항, NNG 10 heuristics, 사용성
+  점검표, m4a_ic 체크리스트, 스크린샷·프로토타입 점검.
 ---
 
 # Heuristic Checklist — NN/G 10 + 44항
@@ -14,10 +14,9 @@ description: >-
 | 참고 | 용도 |
 |------|------|
 | [references/nngroup-ten-heuristics.md](references/nngroup-ten-heuristics.md) | **NN/G 정본** — 정의·예시·팁·관련 글 링크 |
-| [references/heuristic-guide-ko.md](references/heuristic-guide-ko.md) | 한국어 평가 맥락 + [m4a_ic 블로그](https://blog.naver.com/m4a_ic/222155143518) 부제 |
 | [references/checklist-44.md](references/checklist-44.md) | 44항 질문 (**문구 변경 금지**) |
 
-**심층 이슈·심각도:** `heuristic-evaluation` · **빠른 게이트:** `quick-scan` · **NNG 검색:** `nngroup`
+**빠른 게이트:** `quick-scan` · **NNG 검색:** `nngroup`
 
 ## 선행
 
@@ -27,10 +26,9 @@ description: >-
 
 1. 범위의 화면을 탐색한다. 스크린샷·URL·컴포넌트명을 메모한다.
 2. 평가할 휴리스틱(#)마다 `references/nngroup-ten-heuristics.md`에서 **정의·팁**을 확인한다.
-3. 필요 시 `references/heuristic-guide-ko.md`로 한국어 맥락을 보강한다.
-4. `references/checklist-44.md`의 **1.1 → 10.4** 순으로 각 질문에 판정을 붙인다.
-5. 판정이 `아니오` 또는 `부분`이면 근거(화면 위치·요소) + 관련 NNG 원칙 한 줄 + 짧은 개선안.
-6. 휴리스틱(#)별 미충족 수 집계 → 상위 5개 우선 (과업 막힘 > 반복 부담 > 다듬기).
+3. `references/checklist-44.md`의 **1.1 → 10.4** 순으로 각 질문에 판정을 붙인다.
+4. 판정이 `아니오` 또는 `부분`이면 근거(화면 위치·요소) + 관련 NNG 원칙 한 줄 + 짧은 개선안.
+5. 휴리스틱(#)별 미충족 수 집계 → 상위 5개 우선 (과업 막힘 > 반복 부담 > 다듬기).
 
 ## 판정 기준
 
@@ -69,14 +67,13 @@ description: >-
 1. **{ID}** — NNG #n … — 권장: …
 
 ### 다음
-[ ] heuristic-evaluation 심층 / [ ] handoff-pack 전달 / [ ] 사용성 테스트
+[ ] handoff-pack 전달 / [ ] 사용성 테스트
 ```
 
 ## 연계
 
 | 스킬 | 용도 |
 |------|------|
-| `heuristic-evaluation` | 이슈 표·심각도·needs-test |
 | `nngroup` | 최신 NNG 아티클·근거 검색 |
 | `quick-scan` | 소규모 변경 얕은 검사 |
 | `handoff-pack` | 개발·QA 전달 |

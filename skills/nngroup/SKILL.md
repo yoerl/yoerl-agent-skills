@@ -11,7 +11,7 @@ description: >-
 NNG 아티클·가이드를 **검색·읽기·요약**한다. 감이 아닌 **근거(제목+URL)** 를 남긴다.
 
 **검색 절차 SSOT:** [references/search.md](references/search.md)  
-**연계:** 평가 `heuristic-evaluation` · 설득 `evidence-brief`
+**연계:** 평가 `heuristic-checklist-nngroup` · 설득 `evidence-brief`
 
 ## 트리거
 

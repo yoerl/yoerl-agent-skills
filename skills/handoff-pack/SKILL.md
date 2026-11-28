@@ -10,7 +10,7 @@ description: >-
 
 휴리스틱 평가·리뷰 결과를 **역할별 실행 문구**로 분해한다. 평가 표 1개 → 받는 쪽 3~4종.
 
-**선행:** 이슈 목록 또는 `heuristic-evaluation` / `quick-scan` 출력.
+**선행:** 이슈 목록 또는 `heuristic-checklist-nngroup` / `quick-scan` 출력.
 
 ## 분류 규칙
 
