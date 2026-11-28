@@ -16,6 +16,7 @@ npx skills add yoerl/yoerl-agent-skills@quick-scan -y
 npx skills add yoerl/yoerl-agent-skills@evidence-brief -y
 npx skills add yoerl/yoerl-agent-skills@handoff-pack -y
 npx skills add yoerl/yoerl-agent-skills@ux-review-dossier -y
+npx skills add yoerl/yoerl-agent-skills@heuristic-checklist-nngroup -y
 ```
 
 ## 스킬 목록
@@ -27,6 +28,7 @@ npx skills add yoerl/yoerl-agent-skills@ux-review-dossier -y
 | **test-scenario-full** | **시나리오 1개 = md 파일 1개.** 그 파일에 시나리오 정보 + 케이스 요약표 + **모든 TC 상세**(목적·유형·우선순위·전제·입력·절차·기대 결과·실행 결과 칸). 단독 설치 가능 |
 | **semantic-html** | WHATWG HTML 카탈로그 + tiered 절차 (A/B/C 참조)로 시맨틱 마크업·리팩터링 |
 | **heuristic-evaluation** | Jakob Nielsen 10 휴리스틱 전체 평가 — 2-pass, 이슈 표, 심각도, needs-test |
+| **heuristic-checklist-nngroup** | NN/G 10휴리스틱 정본 + **44항** 체크리스트 + 한국어 가이드 — 전문가 점검
 | **nngroup** | nngroup.com `site:` 검색 + 아티클 fetch·요약·맥락 검증 |
 | **quick-scan** | PR·작은 변경용 5휴리스틱 얕은 스캔 — 통과/보류/풀평가 (에이전트 시간 강제 없음) |
 | **evidence-brief** | 회의용 UX 근거 1페이지 — 쟁점, NNG 찬반, 권고 |
@@ -36,7 +38,7 @@ npx skills add yoerl/yoerl-agent-skills@ux-review-dossier -y
 ### UX 스킬 파이프라인
 
 ```
-quick-scan → (보류) → heuristic-evaluation → handoff-pack
+quick-scan → (보류) → heuristic-checklist-nngroup 또는 heuristic-evaluation → handoff-pack
                 ↘ evidence-brief (회의·논쟁 시)
 nngroup (어디서든 근거 검색)
         ↘ ux-review-dossier (UXD 통합 기록)
@@ -64,5 +66,6 @@ MIT License — see [LICENSE](LICENSE).
 
 **Attribution**
 
+- `heuristic-checklist-nngroup`: NN/G [10 heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) + m4a_ic 44항 체크리스트
 - `test-scenario` · `test-case`: harness_culwonder `skills/culwonder/references/` 시나리오·TC 워크플로에서 일반화
 - `semantic-html`: harness_culwonder `skills/semantic-html/` (SKILL.md, references/*, evals)에서 복사 (MIT)
